@@ -4,6 +4,7 @@
 </p>
 
 <!-- Version and documentation -->
+[![PyPI](https://img.shields.io/pypi/v/vaelchi)](https://pypi.org/project/vaelchi/)
 [![Version](https://img.shields.io/badge/version-0.1.0--pre--alpha-orange)](https://github.com/cacodcar/vaelchi/blob/main/CHANGELOG.md)
 [![Python Versions](https://img.shields.io/badge/python-3.12%2B-blue)](https://github.com/cacodcar/vaelchi/blob/main/pyproject.toml)
 [![Documentation](https://img.shields.io/badge/docs-source-blue)](https://github.com/cacodcar/vaelchi/tree/main/docs)
@@ -18,7 +19,7 @@
 
 Vaelchi is a standalone Python package for time-series preprocessing,
 clustering, and representative periods. Version **0.1.0** is the first pre-alpha
-release candidate, providing adjacency-constrained agglomerative hierarchical
+release, providing adjacency-constrained agglomerative hierarchical
 clustering (AHC) for one or more aligned numeric time series.
 
 ## Features
@@ -32,30 +33,23 @@ clustering (AHC) for one or more aligned numeric time series.
 
 ## Installation
 
-Python 3.12 or newer is required. Clone the repository and install Vaelchi:
+Python 3.12 or newer is required. Install Vaelchi from PyPI:
 
 ```sh
-git clone https://github.com/cacodcar/vaelchi.git
-cd vaelchi
-python -m pip install .
-```
-
-For development, install the optional tools:
-
-```sh
-python -m pip install -e '.[test,quality,docs]'
-```
-
-Version 0.1.0 is available from this repository; it has not been published to PyPI.
-You can also install a supplied release wheel in a separate environment:
-
-```sh
-python -m pip install /path/to/vaelchi-0.1.0-py3-none-any.whl
+python -m pip install vaelchi
 python -c "import vaelchi; print(vaelchi.__version__)"
 ```
 
 The printed version should be `0.1.0`. The pre-alpha API may change in later
 releases.
+
+For development, clone the repository and install the optional tools:
+
+```sh
+git clone https://github.com/cacodcar/vaelchi.git
+cd vaelchi
+python -m pip install -e '.[test,quality,docs]'
+```
 
 ## Quick start
 
@@ -80,33 +74,6 @@ row; `weights` counts the original periods assigned to each row. Profiles retain
 input units. The default selection mode is `legacy`, which uses a global
 distance lookup to select profiles. The example explicitly selects
 `nearest_centroid` to choose an observed member of each cluster.
-
-## Example and documentation
-
-Run the two-feature example from the repository root:
-
-```sh
-python examples/representative_days.py
-```
-
-The script prints JSON that other applications can read. A matching
-notebook is in `docs/examples/representative_days.ipynb`. For years → days →
-hours, see `docs/examples/multiyear_representative_days.ipynb`, which selects
-20 days per year and explains calendar mappings, weights, and energy accounting.
-Its plots require `matplotlib` in the notebook environment. Documentation uses
-Sphinx Book Theme and includes tutorials, examples, API reference, and project
-information.
-
-Build the documentation locally:
-
-```sh
-python -m sphinx -W --keep-going -b html docs docs/_build/html
-```
-
-Open `docs/_build/html/index.html`. For the output contract, see
-[Clustering](https://github.com/cacodcar/vaelchi/blob/main/docs/CLUSTERING.md).
-Quality commands are documented in
-[Quality gates](https://github.com/cacodcar/vaelchi/blob/main/docs/QUALITY_GATES.md).
 
 ## License and authorship
 

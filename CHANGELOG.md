@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
-## 0.1.0 — unreleased
+## 0.1.0 — 2026-11-17
 
 - Release Vaelchi as a standalone time-series preprocessing and clustering package.
 - Provide calendar-aware missing-value filling for pandas Series and DataFrames,
