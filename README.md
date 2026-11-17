@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/cacodcar/vaelchi/main/docs/_static/vaelchi-logo-dark.png#gh-dark-mode-only" alt="Vaelchi logo" width="75%">
-  <img src="https://raw.githubusercontent.com/cacodcar/vaelchi/main/docs/_static/vaelchi-logo-light.png#gh-light-mode-only" alt="Vaelchi logo" width="75%">
+  <img class="only-dark" src="https://raw.githubusercontent.com/cacodcar/vaelchi/main/docs/_static/vaelchi-logo-dark.png#gh-dark-mode-only" alt="Vaelchi logo" width="75%">
+  <img class="only-light" src="https://raw.githubusercontent.com/cacodcar/vaelchi/main/docs/_static/vaelchi-logo-light.png#gh-light-mode-only" alt="Vaelchi logo" width="75%">
 </p>
 
 <!-- Version and documentation -->
 [![PyPI](https://img.shields.io/pypi/v/vaelchi)](https://pypi.org/project/vaelchi/)
 [![Version](https://img.shields.io/badge/version-0.1.0--pre--alpha-orange)](https://github.com/cacodcar/vaelchi/blob/main/CHANGELOG.md)
 [![Python Versions](https://img.shields.io/badge/python-3.12%2B-blue)](https://github.com/cacodcar/vaelchi/blob/main/pyproject.toml)
-[![Documentation](https://readthedocs.org/projects/vaelchi/badge/?version=latest)](https://vaelchi.readthedocs.io/en/latest/index.html)
+[![Documentation](https://img.shields.io/readthedocs/vaelchi/latest)](https://vaelchi.readthedocs.io/en/latest/index.html)
 
 <!-- Quality and development -->
 [![Quality](https://github.com/cacodcar/vaelchi/actions/workflows/quality.yml/badge.svg)](https://github.com/cacodcar/vaelchi/actions/workflows/quality.yml)
