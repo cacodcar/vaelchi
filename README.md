@@ -1,9 +1,6 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cacodcar/vael/main/docs/_static/vael-logo-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cacodcar/vael/main/docs/_static/vael-logo-light.png">
-    <img src="https://raw.githubusercontent.com/cacodcar/vael/main/docs/_static/vael-logo-light.png" alt="Vael logo" width="75%">
-  </picture>
+  <img src="https://raw.githubusercontent.com/cacodcar/vael/main/docs/_static/vael-logo-dark.png#gh-dark-mode-only" alt="Vael logo" width="75%">
+  <img src="https://raw.githubusercontent.com/cacodcar/vael/main/docs/_static/vael-logo-light.png#gh-light-mode-only" alt="Vael logo" width="75%">
 </p>
 
 <!-- Version and documentation -->

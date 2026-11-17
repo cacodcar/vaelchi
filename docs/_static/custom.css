@@ -67,6 +67,11 @@ code, pre {
 }
 
 /* Force light mode only */
+/* OpenAI Codex: match the README logo to these light-only documentation pages. */
+img[src$="#gh-dark-mode-only"] {
+  display: none;
+}
+
 html[data-theme="dark"],
 html[data-theme="auto"],
 html {
