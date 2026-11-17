@@ -52,6 +52,7 @@ docs = [
 
 [project.urls]
 Homepage = "https://github.com/cacodcar/vaelchi"
+Documentation = "https://vaelchi.readthedocs.io/en/latest/index.html"
 Issues = "https://github.com/cacodcar/vaelchi/issues"
 
 

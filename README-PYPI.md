@@ -2,9 +2,9 @@
 
 # Vaelchi
 
-Vaelchi is a standalone Python package for time-series preprocessing, clustering,
-and representative periods. Version **0.1.0** is the first **pre-alpha** release;
-the API may change in later releases.
+Vaelchi is a Python package for time-series analysis, including preprocessing,
+clustering, and representative periods. Version **0.1.0** is the first
+**pre-alpha** release; the API may change in later releases.
 
 ## Installation
 
@@ -47,7 +47,7 @@ observed member of each cluster.
 
 See the [repository and installation guide](https://github.com/cacodcar/vaelchi),
 [examples](https://github.com/cacodcar/vaelchi/tree/main/docs/examples), and
-[documentation source](https://github.com/cacodcar/vaelchi/tree/main/docs).
+[documentation](https://vaelchi.readthedocs.io/en/latest/index.html).
 Report problems through [GitHub Issues](https://github.com/cacodcar/vaelchi/issues).
 
 MIT license, copyright Rahul Kakodkar. Original author credits and numerical

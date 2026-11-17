@@ -1,5 +1,5 @@
-Time-series clustering with Vaelchi
-===================================
+Time-series analysis with Vaelchi
+=================================
 
 .. include:: ../README.md
    :parser: myst_parser.sphinx_

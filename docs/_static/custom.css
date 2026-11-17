@@ -1,9 +1,4 @@
-/* Adapted from Gana by OpenAI Codex (GPT-6). */
-/* Hides dark/light mode switch button */
-button.theme-switch-button {
-    display: none !important;
-}
-
+/* Adapted by OpenAI Codex from Gana 82d90d47eba1b3bdf49efa171ee1b1484bba06ec; original author Rahul Kakodkar. */
 /* Import the web font (Latin Modern from fonts.cdnfonts.com) */
 @import url("https://fonts.cdnfonts.com/css/latin-modern-roman");
 
@@ -14,8 +9,18 @@ button.theme-switch-button {
   --text-color: #2b2b2b;
   --accent-color: #0044aa;
   --code-bg: #f8f9fa;
+  --heading-color: #222;
+  --title-color: #002e8a;
 }
 
+/* Follow the theme switcher's resolved mode, including system preference. */
+html[data-theme="dark"] {
+  --text-color: #e8edf5;
+  --accent-color: #91baff;
+  --code-bg: var(--pst-color-surface);
+  --heading-color: #e8edf5;
+  --title-color: #b2ceff;
+}
 
 /* Body text */
 body {
@@ -32,16 +37,16 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--main-font);
   font-weight: 1200;           /* Makes headings bold */
-  color: #1a1a1a;
+  color: var(--heading-color);
   /* margin-top: 1em; */
   /* line-height: 1.2; */
   letter-spacing: -0.01em;
 }
 
 /* Optional: slightly different colors by level */
-h1 { color: #002e8a; }  /* Deep blue for main title */
-h2 { color: #0044aa; }
-h3, h4, h5, h6 { color: #222; }
+h1 { color: var(--title-color); }
+h2 { color: var(--accent-color); }
+h3, h4, h5, h6 { color: var(--heading-color); }
 
 /* Links */
 a {
@@ -66,21 +71,13 @@ code, pre {
   --sb-width: 320px;  /* or whatever width you like */
 }
 
-/* Force light mode only */
-/* OpenAI Codex: match the README logo to these light-only documentation pages. */
-img[src$="#gh-dark-mode-only"] {
-  display: none;
-}
-
-html[data-theme="dark"],
-html[data-theme="auto"],
-html {
-  color-scheme: light !important;
-  background-color: #ffffff !important;
-  color: #000000 !important;
-}
-
 /* Hide line breaks in Markdown cells */
 br {
     display: none;
+}
+
+/* OpenAI Codex: show the matching README logo when included in Sphinx. */
+html[data-theme="light"] img[src$="#gh-dark-mode-only"],
+html[data-theme="dark"] img[src$="#gh-light-mode-only"] {
+  display: none;
 }

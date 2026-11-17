@@ -2,8 +2,8 @@
 include README.md README-PYPI.md CHANGELOG.md LICENSE conftest.py
 include .coveragerc ruff.toml tox.ini .readthedocs.yml
 recursive-include examples *.py
-# OpenAI Codex: preserve the documentation logos in source distributions.
-recursive-include docs *.rst *.md *.py *.css *.ipynb *.json *.png
+# OpenAI Codex: preserve documentation logos and templates in source distributions.
+recursive-include docs *.rst *.md *.py *.css *.html *.ipynb *.json *.png
 recursive-include tests *.py
 recursive-include tools *.py
 recursive-include requirements *.lock *.json

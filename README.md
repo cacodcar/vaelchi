@@ -7,7 +7,7 @@
 [![PyPI](https://img.shields.io/pypi/v/vaelchi)](https://pypi.org/project/vaelchi/)
 [![Version](https://img.shields.io/badge/version-0.1.0--pre--alpha-orange)](https://github.com/cacodcar/vaelchi/blob/main/CHANGELOG.md)
 [![Python Versions](https://img.shields.io/badge/python-3.12%2B-blue)](https://github.com/cacodcar/vaelchi/blob/main/pyproject.toml)
-[![Documentation](https://img.shields.io/badge/docs-source-blue)](https://github.com/cacodcar/vaelchi/tree/main/docs)
+[![Documentation](https://readthedocs.org/projects/vaelchi/badge/?version=latest)](https://vaelchi.readthedocs.io/en/latest/index.html)
 
 <!-- Quality and development -->
 [![Quality](https://github.com/cacodcar/vaelchi/actions/workflows/quality.yml/badge.svg)](https://github.com/cacodcar/vaelchi/actions/workflows/quality.yml)
@@ -17,7 +17,7 @@
 
 # Vaelchi
 
-Vaelchi is a standalone Python package for time-series preprocessing,
+Vaelchi is a Python package for time-series analysis, including preprocessing,
 clustering, and representative periods. Version **0.1.0** is the first pre-alpha
 release, providing adjacency-constrained agglomerative hierarchical
 clustering (AHC) for one or more aligned numeric time series.
