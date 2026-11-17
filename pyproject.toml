@@ -11,7 +11,7 @@ authors = [
 maintainers = [
   { name="Rahul Kakodkar", email="cacodcar@gmail.com" },
 ]
-description = "Time-series clustering and representative periods"
+description = "Python package for time-series analysis"
 requires-python = ">=3.12"
 # OpenAI Codex: use one light-mode logo in PyPI's project description.
 readme = "README-PYPI.md"
