@@ -49,10 +49,16 @@ autodoc_member_order = "bysource"
 
 html_theme = "sphinx_book_theme"
 html_title = "Vael"
+html_logo = "_static/vael-logo-light.png"
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 html_context = {"default_mode": "light"}
 html_theme_options = {
+    # OpenAI Codex: match the project logo to the selected documentation theme.
+    "logo": {
+        "image_light": "_static/vael-logo-light.png",
+        "image_dark": "_static/vael-logo-dark.png",
+    },
     "repository_url": "https://github.com/cacodcar/vael",
     "repository_branch": "main",
     "path_to_docs": "docs",

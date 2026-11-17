@@ -1,3 +1,22 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cacodcar/vael/main/docs/_static/vael-logo-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cacodcar/vael/main/docs/_static/vael-logo-light.png">
+    <img src="https://raw.githubusercontent.com/cacodcar/vael/main/docs/_static/vael-logo-light.png" alt="Vael logo" width="75%">
+  </picture>
+</p>
+
+<!-- Version and documentation -->
+[![Version](https://img.shields.io/badge/version-0.1.0--pre--alpha-orange)](https://github.com/cacodcar/vael/blob/main/CHANGELOG.md)
+[![Python Versions](https://img.shields.io/badge/python-3.12%2B-blue)](https://github.com/cacodcar/vael/blob/main/pyproject.toml)
+[![Documentation](https://img.shields.io/badge/docs-source-blue)](https://github.com/cacodcar/vael/tree/main/docs)
+
+<!-- Quality and development -->
+[![Quality](https://github.com/cacodcar/vael/actions/workflows/quality.yml/badge.svg)](https://github.com/cacodcar/vael/actions/workflows/quality.yml)
+[![Coverage](https://codecov.io/gh/cacodcar/vael/graph/badge.svg)](https://codecov.io/gh/cacodcar/vael)
+[![License](https://img.shields.io/github/license/cacodcar/vael)](https://github.com/cacodcar/vael/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/cacodcar/vael)](https://github.com/cacodcar/vael/commits/main)
+
 # Vael
 
 Vael is a standalone Python package for time-series preprocessing,
