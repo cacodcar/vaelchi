@@ -84,9 +84,9 @@ html[data-theme="dark"] img[src$="#gh-light-mode-only"] {
 
 /* OpenAI Codex: preserve transparent branding and badge colors in both modes.
    PyData's default dark-mode image treatment adds white and dims images. */
-html .bd-content img[src*="vaelchi-logo-"],
-html .bd-content img[src*="img.shields.io/"],
-html .bd-content img[src*="/badge.svg"] {
+html[data-theme] .bd-content img[src*="vaelchi-logo-"],
+html[data-theme] .bd-content img[src*="img.shields.io/"],
+html[data-theme] .bd-content img[src*="/badge.svg"] {
   background-color: transparent;
   filter: none;
 }
