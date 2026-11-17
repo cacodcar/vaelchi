@@ -1,0 +1,72 @@
+src/vael/__init__.py
+    LOC: 0
+    LLOC: 0
+    SLOC: 0
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+src/vael/algorithms/ahc.py
+    LOC: 1
+    LLOC: 1
+    SLOC: 0
+    Comments: 0
+    Single comments: 1
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+src/vael/algorithms/__init__.py
+    LOC: 0
+    LLOC: 0
+    SLOC: 0
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+src/vael/functions/measure.py
+    LOC: 16
+    LLOC: 4
+    SLOC: 2
+    Comments: 0
+    Single comments: 1
+    Multi: 9
+    Blank: 4
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 56%
+src/vael/functions/generate.py
+    LOC: 29
+    LLOC: 9
+    SLOC: 7
+    Comments: 1
+    Single comments: 2
+    Multi: 9
+    Blank: 11
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 14%
+        (C + M % L): 34%
+src/vael/functions/other.py
+    LOC: 34
+    LLOC: 16
+    SLOC: 14
+    Comments: 3
+    Single comments: 4
+    Multi: 9
+    Blank: 7
+    - Comment Stats
+        (C % L): 9%
+        (C % S): 21%
+        (C + M % L): 35%

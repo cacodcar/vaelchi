@@ -1,0 +1,12 @@
+#  include reproducible user documentation.
+include README.md CHANGELOG.md LICENSE conftest.py
+include .coveragerc ruff.toml tox.ini .readthedocs.yml
+recursive-include examples *.py
+recursive-include docs *.rst *.md *.py *.css *.ipynb *.json
+recursive-include tests *.py
+recursive-include tools *.py
+recursive-include requirements *.lock *.json
+prune docs/_build
+global-exclude __pycache__ *.py[cod] .DS_Store
+
+prune build

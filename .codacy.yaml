@@ -1,0 +1,8 @@
+# Vael code quality configuration.
+engines:
+  python:
+    enabled: true
+exclude_paths:
+  - "tests/**"
+  - "docs/**"
+  - "quality/**"

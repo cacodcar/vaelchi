@@ -1,0 +1,45 @@
+#  preserve failures and upload all evidence.
+name: Quality
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install test, quality, and documentation tools
+        run: python -m pip install -e '.[test,quality,docs]'
+      - name: Build source distribution and wheel
+        run: python -m build
+      - name: Validate installed wheel and example
+        run: |
+          python -m pip install --no-deps --force-reinstall dist/vael-*.whl
+          python -I examples/representative_days.py
+      - name: Preserve distributions
+        uses: actions/upload-artifact@v4
+        with:
+          name: distributions-${{ matrix.python-version }}
+          path: dist/
+      - name: Run all blocking gates
+        run: python tools/quality.py all --output quality/reports/ci
+      - name: Upload coverage to Codecov
+        if: ${{ !cancelled() && hashFiles('quality/reports/ci/coverage.xml') != '' }}
+        uses: codecov/codecov-action@v5
+        with:
+          files: quality/reports/ci/coverage.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
+      - name: Preserve gate evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: quality-${{ matrix.python-version }}
+          path: quality/reports/

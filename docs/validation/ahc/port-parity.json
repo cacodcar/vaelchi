@@ -1,0 +1,161 @@
+{
+  "comparisons": [
+    {
+      "dataset": "houston_legacy_solar_wind",
+      "periods": 20,
+      "selection": "legacy",
+      "exact_match": true
+    },
+    {
+      "dataset": "houston_legacy_solar_wind",
+      "periods": 20,
+      "selection": "nearest_centroid",
+      "exact_match": true
+    },
+    {
+      "dataset": "houston_legacy_solar_wind",
+      "periods": 35,
+      "selection": "legacy",
+      "exact_match": true
+    },
+    {
+      "dataset": "houston_legacy_solar_wind",
+      "periods": 35,
+      "selection": "nearest_centroid",
+      "exact_match": true
+    },
+    {
+      "dataset": "houston_2019",
+      "periods": 20,
+      "selection": "legacy",
+      "exact_match": true
+    },
+    {
+      "dataset": "houston_2019",
+      "periods": 20,
+      "selection": "nearest_centroid",
+      "exact_match": true
+    },
+    {
+      "dataset": "houston_2019",
+      "periods": 35,
+      "selection": "legacy",
+      "exact_match": true
+    },
+    {
+      "dataset": "houston_2019",
+      "periods": 35,
+      "selection": "nearest_centroid",
+      "exact_match": true
+    },
+    {
+      "dataset": "sandiego_2019",
+      "periods": 20,
+      "selection": "legacy",
+      "exact_match": true
+    },
+    {
+      "dataset": "sandiego_2019",
+      "periods": 20,
+      "selection": "nearest_centroid",
+      "exact_match": true
+    },
+    {
+      "dataset": "sandiego_2019",
+      "periods": 35,
+      "selection": "legacy",
+      "exact_match": true
+    },
+    {
+      "dataset": "sandiego_2019",
+      "periods": 35,
+      "selection": "nearest_centroid",
+      "exact_match": true
+    },
+    {
+      "dataset": "newyork_weather",
+      "periods": 20,
+      "selection": "legacy",
+      "exact_match": true
+    },
+    {
+      "dataset": "newyork_weather",
+      "periods": 20,
+      "selection": "nearest_centroid",
+      "exact_match": true
+    },
+    {
+      "dataset": "newyork_weather",
+      "periods": 35,
+      "selection": "legacy",
+      "exact_match": true
+    },
+    {
+      "dataset": "newyork_weather",
+      "periods": 35,
+      "selection": "nearest_centroid",
+      "exact_match": true
+    },
+    {
+      "dataset": "newyork_load",
+      "periods": 20,
+      "selection": "legacy",
+      "exact_match": true
+    },
+    {
+      "dataset": "newyork_load",
+      "periods": 20,
+      "selection": "nearest_centroid",
+      "exact_match": true
+    },
+    {
+      "dataset": "newyork_load",
+      "periods": 35,
+      "selection": "legacy",
+      "exact_match": true
+    },
+    {
+      "dataset": "newyork_load",
+      "periods": 35,
+      "selection": "nearest_centroid",
+      "exact_match": true
+    },
+    {
+      "dataset": "multi_parent",
+      "periods": 1,
+      "selection": "legacy",
+      "exact_match": true
+    },
+    {
+      "dataset": "multi_parent",
+      "periods": 2,
+      "selection": "legacy",
+      "exact_match": true
+    },
+    {
+      "dataset": "multi_parent",
+      "periods": 4,
+      "selection": "legacy",
+      "exact_match": true
+    },
+    {
+      "dataset": "multi_parent",
+      "periods": 1,
+      "selection": "nearest_centroid",
+      "exact_match": true
+    },
+    {
+      "dataset": "multi_parent",
+      "periods": 2,
+      "selection": "nearest_centroid",
+      "exact_match": true
+    },
+    {
+      "dataset": "multi_parent",
+      "periods": 4,
+      "selection": "nearest_centroid",
+      "exact_match": true
+    }
+  ],
+  "original_source_sha256": "8edc30d9c4e64fcebd2d690dbe2675eaf278d4cda311010bc21647657cc8c9ae"
+}

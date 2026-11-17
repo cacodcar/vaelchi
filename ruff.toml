@@ -1,0 +1,37 @@
+# Vael lint and formatting configuration.
+# Match the editor, quality environment, hooks and CI.
+required-version = "==0.16.9"
+target-version = "py312"
+line-length = 79
+
+[lint]
+# what rules to check against
+select = ["C90", "F", "E", "W", "I", "NPY", "S", "B", "BLE", "A", "COM", "C4", "T10", "RET", "ARG", "PL", "TRY", "RUF"]
+
+
+# rules to ignore
+ignore = ["COM812", "E501", "RET505", "E731", "B905", "PLR0913", "ARG001", "B028","PLW1641"]
+
+# Rule explanations:
+# COM812: Ruff format owns trailing commas; the lint fix conflicts with it.
+# E501: line too long
+# RET505:  Unnecessary `{branch}` after `return` statement
+# E731: do not assign a lambda expression, use a def
+# B905: Use of zip without strict parameter
+# PLR0913: to many arguments
+# ARG001: unused argument
+# B028: use of warning without stack level declared
+
+
+# exclude some directories
+exclude = ['docs', '.github']
+
+[lint.per-file-ignores]
+
+[lint.mccabe]
+max-complexity = 10
+
+[lint.isort]
+# Keep import groups identical in the editor and temporary quality directories.
+known-first-party = ["vael", "quality_checks", "quality", "quality_lock", "profile_context", "profile_stats", "pytest_profile"]
+

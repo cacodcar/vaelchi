@@ -1,0 +1,190 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "cwd": "${workspaceFolder}",
+    "env": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    }
+  },
+  "presentation": {
+    "reveal": "always",
+    "panel": "shared",
+    "echo": true
+  },
+  "tasks": [
+    {
+      "label": "Vael: Test Coverage",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "tools/quality.py",
+        "tests"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: Cyclomatic Complexity",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "tools/quality.py",
+        "complexity"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: Maintainability Index",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "tools/quality.py",
+        "maintainability"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: Raw Metrics",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "tools/quality.py",
+        "raw"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: Lint",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "tools/quality.py",
+        "lint"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: Format Check",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "tools/quality.py",
+        "format"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: Type Check",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "tools/quality.py",
+        "types"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: Documentation Build",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "tools/quality.py",
+        "docs"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: Dependency Check",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "tools/quality.py",
+        "dependencies"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: All Quality Checks",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "tools/quality.py",
+        "all"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: Locked Quality Baseline",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "tools/quality.py",
+        "all",
+        "--baseline"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: Python Version Matrix",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "-m",
+        "tox"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: Complexity B or worse report",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "-m",
+        "radon",
+        "cc",
+        "src",
+        "--min",
+        "B",
+        "-s",
+        "-a"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: Build Distributions",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "-m",
+        "build"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vael: Run Example",
+      "type": "process",
+      "command": "${workspaceFolder}/.quality-venv/bin/python",
+      "args": [
+        "examples/representative_days.py"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}

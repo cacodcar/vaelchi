@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: /Users/cacodcar/Research/packages/vael
+configfile: pyproject.toml
+plugins: hypothesis-6.168.3, cov-7.1.0
+collected 1 item
+
+tests/generate_test.py .                                                 [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform darwin, python 3.13.7-final-0 _______________
+
+Name                              Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------------
+src/vael/__init__.py                  0      0      0      0   100%
+src/vael/algorithms/__init__.py       0      0      0      0   100%
+src/vael/algorithms/ahc.py            0      0      0      0   100%
+src/vael/functions/generate.py        7      0      2      0   100%
+src/vael/functions/measure.py         2      2      0      0     0%   4-16
+src/vael/functions/other.py          14     14      6      0     0%   4-34
+-----------------------------------------------------------------------------
+TOTAL                                23     16      8      0    29%
+Coverage XML written to file quality/reports/coverage.xml
+Coverage JSON written to file quality/reports/coverage.json
+============================== 1 passed in 27.35s ==============================

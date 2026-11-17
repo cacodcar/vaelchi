@@ -1,0 +1,87 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vael"
+version = "0.1.0"
+authors = [
+  { name="Rahul Kakodkar", email="cacodcar@gmail.com" },
+]
+maintainers = [
+  { name="Rahul Kakodkar", email="cacodcar@gmail.com" },
+]
+description = "Time-series clustering and representative periods"
+requires-python = ">=3.12"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["representative days", "modeling", "energy systems", "clustering"]
+
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+
+dependencies = ["pandas", "numpy", "scipy", "scikit-learn"]
+[project.optional-dependencies]
+#  shared test and quality toolchain.
+#  complete test tooling.
+test = ["coverage", "pytest", "pytest-cov", "hypothesis", "flake8", "radon", "ruff==0.16.9", "tox"]
+quality = ["radon", "ruff==0.16.9", "mypy", "tox", "build", "setuptools", "wheel", "packaging", "pandas-stubs==3.0.5.260914", "scipy-stubs==1.18.1.1"]
+docs = [
+    "sphinx",            
+    "sphinx-book-theme",  
+    "nbsphinx",          
+    "sphinx_mdinclude",     
+    "myst-nb", 
+    "sphinxcontrib-bibtex",
+    "sphinx-copybutton",
+    "sphinx-togglebutton",
+    "sphinx-thebe",
+    "sphinx-design",
+    "sphinx-examples",          
+    "sphinx-tabs",
+    "sphinxext-opengraph",
+]
+
+[project.urls]
+Homepage = "https://github.com/cacodcar/vael"
+Issues = "https://github.com/cacodcar/vael/issues"
+
+
+#  resolve the public package in local tests.
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+#  independent measured coverage floors.
+[tool.research-quality]
+package = "vael"
+statement-floor = 90
+branch-floor = 88
+local-dependencies = []
+
+#  check annotated and unannotated bodies.
+[tool.mypy]
+python_version = "3.12"
+check_untyped_defs = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+explicit_package_bases = true
+namespace_packages = true
+mypy_path = ["$MYPY_CONFIG_FILE_DIR/src", "$MYPY_CONFIG_FILE_DIR/tools"]
+
+# scikit-learn lacks a typing marker. Analyze its actual source instead of
+# ignoring missing imports, matching Gana's policy for unmarked dependencies.
+[[tool.mypy.overrides]]
+module = ["sklearn", "sklearn.*"]
+follow_untyped_imports = true
+
+#  ship only the Vael source namespace.
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["vael", "vael.*"]

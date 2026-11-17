@@ -1,0 +1,104 @@
+{
+  "pytest": {
+    "command": [
+      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "-m",
+      "pytest",
+      "tests",
+      "--cov",
+      "--cov-report=term-missing",
+      "--cov-report=xml",
+      "--cov-report=json:quality/reports/coverage.json"
+    ],
+    "exit_code": 0
+  },
+  "complexity": {
+    "command": [
+      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "-m",
+      "radon",
+      "cc",
+      "src/vael",
+      "-s",
+      "-a"
+    ],
+    "exit_code": 0
+  },
+  "complexity-b-plus": {
+    "command": [
+      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "-m",
+      "radon",
+      "cc",
+      "src/vael",
+      "--min",
+      "B",
+      "-s",
+      "-a"
+    ],
+    "exit_code": 0
+  },
+  "maintainability": {
+    "command": [
+      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "-m",
+      "radon",
+      "mi",
+      "src/vael",
+      "-s"
+    ],
+    "exit_code": 0
+  },
+  "raw": {
+    "command": [
+      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "-m",
+      "radon",
+      "raw",
+      "src/vael"
+    ],
+    "exit_code": 0
+  },
+  "flake8": {
+    "command": [
+      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "-m",
+      "flake8",
+      "src",
+      "tests"
+    ],
+    "exit_code": 1
+  },
+  "ruff": {
+    "command": [
+      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "-m",
+      "ruff",
+      "check",
+      "src",
+      "tests"
+    ],
+    "exit_code": 1
+  },
+  "format": {
+    "command": [
+      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "src",
+      "tests"
+    ],
+    "exit_code": 1
+  },
+  "pip-check": {
+    "command": [
+      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "exit_code": 0
+  }
+}

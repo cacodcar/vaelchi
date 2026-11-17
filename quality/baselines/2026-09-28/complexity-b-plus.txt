@@ -1,0 +1,5 @@
+src/vael/functions/other.py
+    F 4:0 normalize - B (10)
+
+1 blocks (classes, functions, methods) analyzed.
+Average complexity: B (10.0)

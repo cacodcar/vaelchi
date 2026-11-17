@@ -1,0 +1,26 @@
+unformatted: File would be reformatted
+ --> src/vael/algorithms/ahc.py:1:7
+  |
+  - """"""
+1 + """"""
+  |
+
+unformatted: File would be reformatted
+  --> src/vael/functions/generate.py:27:1
+   |
+26 |     return _matrix
+   -
+   -
+   -
+   |
+
+unformatted: File would be reformatted
+  --> tests/generate_test.py:28:1
+   |
+27 |     assert (connectivity_matrix(5, cyclic=True) == expected_cyclic).all()
+   -
+   -
+   |
+
+3 files would be reformatted, 5 files already formatted
+warning: The following rule may cause conflicts when used with the formatter: `missing-trailing-comma` (`COM812`). To avoid unexpected behavior, we recommend disabling this rule, either by removing it from the `lint.select` or `lint.extend-select` configuration, or adding it to the `lint.ignore` configuration.

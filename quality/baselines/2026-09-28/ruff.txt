@@ -1,0 +1,54 @@
+W292 [*] No newline at end of file
+ --> src/vael/algorithms/ahc.py:1:7
+  |
+1 | """"""
+  |       ^
+help: Add trailing newline
+  |
+  - """"""
+1 + """"""
+  |
+
+TRY003 Avoid specifying long messages outside the exception class
+  --> src/vael/functions/other.py:34:11
+   |
+32 |         return [normalize(i) if isinstance(i, list) else i / max(data) for i in data]
+33 |
+34 |     raise ValueError("Invalid normalization method. Use 'min_max' or 'max'.")
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+F401 [*] `pytest` imported but unused
+ --> tests/generate_test.py:1:8
+  |
+1 | import pytest
+  |        ^^^^^^
+2 |
+3 | #  use the renamed public package.
+  |
+help: Remove unused import: `pytest`
+  |
+  - import pytest
+1 |
+  |
+
+S101 Use of `assert` detected
+  --> tests/generate_test.py:17:5
+   |
+15 |         [0, 0, 0, 1, 0],
+16 |     ]
+17 |     assert (connectivity_matrix(5) == expected_non_cyclic).all()
+   |     ^^^^^^
+18 |
+19 |     # Test cyclic connectivity matrix
+   |
+
+S101 Use of `assert` detected
+  --> tests/generate_test.py:27:5
+   |
+25 |         [1, 0, 0, 1, 0],
+26 |     ]
+27 |     assert (connectivity_matrix(5, cyclic=True) == expected_cyclic).all()
+   |     ^^^^^^
+
+Found 5 errors.
+[*] 2 fixable with the `--fix` option.
