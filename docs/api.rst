@@ -1,7 +1,7 @@
 API reference
 =============
 
-.. currentmodule:: vael
+.. currentmodule:: vaelchi
 
 Preprocessing
 -------------
@@ -25,5 +25,5 @@ Compatibility helpers
 These helpers retain their historical behavior. In particular,
 ``find_euclidean_distance`` returns a **squared** distance.
 
-.. automodule:: vael.functions.legacy
+.. automodule:: vaelchi.functions.legacy
    :members:

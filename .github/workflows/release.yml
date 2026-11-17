@@ -1,0 +1,35 @@
+# OpenAI Codex: publish validated distributions through PyPI Trusted Publishing.
+name: Publish to PyPI
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pypi-${{ github.event.release.tag_name }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    uses: ./.github/workflows/quality.yml
+    secrets: inherit
+
+  publish:
+    name: Publish validated distributions
+    needs: validate
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/vaelchi/
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: distributions-3.12
+          path: dist/
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # release/v1

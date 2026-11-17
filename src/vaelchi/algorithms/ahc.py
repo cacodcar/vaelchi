@@ -17,7 +17,7 @@ from sklearn.cluster import AgglomerativeClustering
 from sklearn.neighbors import NearestCentroid
 from sklearn.preprocessing import StandardScaler
 
-from vael.result import AHCResult
+from vaelchi.result import AHCResult
 
 
 def _positive_integer(value: int, name: str) -> int:

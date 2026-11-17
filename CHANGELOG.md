@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.1.0 — unreleased
 
-- Release Vael as a standalone time-series preprocessing and clustering package.
+- Release Vaelchi as a standalone time-series preprocessing and clustering package.
 - Provide calendar-aware missing-value filling for pandas Series and DataFrames,
   with forward fill, backward fill, and time interpolation.
 - Add multiyear representative-day examples with chronological mappings and

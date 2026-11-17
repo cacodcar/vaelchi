@@ -5,7 +5,7 @@ set -eu
 repository=$(git rev-parse --show-toplevel)
 cd "$repository"
 if [ ! -x "$repository/.venv/bin/python" ]; then
-    echo "Vael quality gate: create .venv and install .[test] first." >&2
+    echo "Vaelchi quality gate: create .venv and install .[test] first." >&2
     exit 1
 fi
 exec "$repository/.venv/bin/python" -m pytest tests --cov     --cov-report=term-missing --cov-report=xml     --cov-report=json:quality/reports/coverage.json

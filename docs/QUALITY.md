@@ -16,7 +16,7 @@ checks must retain their own evidence rather than replace those records.
 
 # Historical quality setup — September 2026
 
-Use Vael's dedicated `.venv` (reference: CPython 3.13.7). From this directory:
+Use Vaelchi's dedicated `.venv` (reference: CPython 3.13.7). From this directory:
 
 ```sh
 python3.13 -m venv .venv
@@ -24,7 +24,7 @@ python3.13 -m venv .venv
 .venv/bin/python -m pip check
 ```
 
-VS Code provides **Vael: All Quality Checks** in `.vscode/tasks.json` and
+VS Code provides **Vaelchi: All Quality Checks** in `.vscode/tasks.json` and
 individual tasks. Every task uses `.venv/bin/python`; the aggregate runs checks
 independently so a lint failure does not prevent coverage or metrics collection.
 
@@ -32,10 +32,10 @@ Equivalent commands:
 
 ```sh
 .venv/bin/python -m pytest tests --cov --cov-report=term-missing --cov-report=xml --cov-report=json:quality/reports/coverage.json
-.venv/bin/python -m radon cc src/vael -s -a
-.venv/bin/python -m radon cc src/vael --min B -s -a
-.venv/bin/python -m radon mi src/vael -s
-.venv/bin/python -m radon raw src/vael
+.venv/bin/python -m radon cc src/vaelchi -s -a
+.venv/bin/python -m radon cc src/vaelchi --min B -s -a
+.venv/bin/python -m radon mi src/vaelchi -s
+.venv/bin/python -m radon raw src/vaelchi
 .venv/bin/python -m flake8 src tests
 .venv/bin/python -m ruff check src tests
 .venv/bin/python -m ruff format --check src tests
@@ -56,7 +56,7 @@ No type checker was configured in the inspected reference projects.
 
 The GitHub workflow checks Python 3.12 and 3.13, fails on lint/format findings,
 and retains coverage artifacts. `.codacy.yaml` configures code analysis.
-The private GitHub repository is `cacodcar/vael`. Remote CI and Codacy
+The private GitHub repository is `cacodcar/vaelchi`. Remote CI and Codacy
 have not run: no commits or workflow files have been pushed. No publishing
 workflow or upload credentials were added. The referenced LICENSE file remains missing and needs an author
 provided license before release, although editable installation succeeds.
@@ -66,7 +66,7 @@ provided license before release, although editable installation succeeds.
 The following records the gate configuration on 2026-09-28.
 
 - `tox.ini` runs test/branch-coverage checks in isolated Python 3.12 and 3.13
-  environments. Run `.venv/bin/python -m tox`, or **Vael: Python Version Matrix**.
+  environments. Run `.venv/bin/python -m tox`, or **Vaelchi: Python Version Matrix**.
   Both Python interpreters must be installed. The aggregate VS Code task includes
   the matrix. Each environment writes its own reports under `.tox/`.
 - VS Code pytest discovery is enabled, with unittest discovery disabled.
@@ -77,7 +77,7 @@ The following records the gate configuration on 2026-09-28.
 - `.githooks/pre-commit` and `.githooks/pre-push` run the shared test/coverage
   gate with `.venv`. They propagate failures, including a missing environment.
   They gate tests/coverage collection; CI separately gates lint and formatting.
-  At that stage, Vael had no numeric coverage floor.
+  At that stage, Vaelchi had no numeric coverage floor.
 
 Hooks are activated in this checkout. After cloning, activate them with:
 
@@ -96,9 +96,9 @@ A/B ranks remain the required review standard.
 
 ### Hosted protection limitation
 
-GitHub returned HTTP 403 for both Vael rulesets and branch protection with:
+GitHub returned HTTP 403 for both Vaelchi rulesets and branch protection with:
 "Upgrade to GitHub Pro or make this repository public to enable this feature."
-Vael was private at the time of this check. Enabling branch protection required
+Vaelchi was private at the time of this check. Enabling branch protection required
 the GitHub plan capability and an initial branch. Configuration files alone
 do not establish remote protection or connect Codecov/Codacy.
 

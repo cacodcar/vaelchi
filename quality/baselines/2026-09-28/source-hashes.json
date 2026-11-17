@@ -1,10 +1,10 @@
 {
-  "src/vael/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "src/vael/algorithms/ahc.py": "71f37c09fdf6373a2c6afd11a4d20421862fd722ce465743c2f49f763a639f56",
-  "src/vael/algorithms/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "src/vael/functions/measure.py": "ba37fe4b9de375f0cd2bf3655f84cf9f0763b458dc889948cabaf7b5e74812f5",
-  "src/vael/functions/generate.py": "c6e8fc27f58c89356cf14b50ec927ce4e920b8eb3bae8c6d10a6935adcc3af79",
-  "src/vael/functions/other.py": "08b42498064fcfbb706fb80759b23eb5907692d6143a04a59f149dd933fe98d6",
+  "src/vaelchi/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "src/vaelchi/algorithms/ahc.py": "71f37c09fdf6373a2c6afd11a4d20421862fd722ce465743c2f49f763a639f56",
+  "src/vaelchi/algorithms/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "src/vaelchi/functions/measure.py": "ba37fe4b9de375f0cd2bf3655f84cf9f0763b458dc889948cabaf7b5e74812f5",
+  "src/vaelchi/functions/generate.py": "c6e8fc27f58c89356cf14b50ec927ce4e920b8eb3bae8c6d10a6935adcc3af79",
+  "src/vaelchi/functions/other.py": "08b42498064fcfbb706fb80759b23eb5907692d6143a04a59f149dd933fe98d6",
   "tests/generate_test.py": "66b7bf46671b6e90ea9ef2ee064f4db56a2a1e2bb4495a20467e3919054b0727",
   "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 }

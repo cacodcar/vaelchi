@@ -2,14 +2,14 @@
 
 Each day contains four six-hour samples of demand and temperature. Keeping the
 features separate preserves their order and units in the output. Run this file
-from an installed Vael environment.
+from an installed Vaelchi environment.
 """
 
 import json
 
 import numpy as np
 
-from vael import AHCResult, ahc
+from vaelchi import AHCResult, ahc
 
 
 def representative_days() -> AHCResult:

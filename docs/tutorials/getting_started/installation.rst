@@ -1,19 +1,19 @@
 Installation
 ============
 
-Vael 0.1.0 requires Python 3.12 or newer. Its runtime dependencies are NumPy,
+Vaelchi 0.1.0 requires Python 3.12 or newer. Its runtime dependencies are NumPy,
 pandas, SciPy, and scikit-learn.
 
-Clone the repository and install Vael in a virtual environment:
+Clone the repository and install Vaelchi in a virtual environment:
 
 .. code-block:: console
 
-   git clone https://github.com/cacodcar/vael.git
-   cd vael
+   git clone https://github.com/cacodcar/vaelchi.git
+   cd vaelchi
    python -m venv .venv
    source .venv/bin/activate
    python -m pip install .
-   python -c "import vael; print(vael.__version__)"
+   python -c "import vaelchi; print(vaelchi.__version__)"
 
 The version printed should be ``0.1.0``. On Windows, activate the environment
 with ``.venv\Scripts\activate`` instead.
@@ -38,6 +38,6 @@ wheel into a separate environment:
 
 .. code-block:: console
 
-   python -m pip install dist/vael-0.1.0-py3-none-any.whl
+   python -m pip install dist/vaelchi-0.1.0-py3-none-any.whl
 
 Building distributions does not publish them.

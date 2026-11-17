@@ -1,8 +1,8 @@
-src/vael/functions/measure.py
+src/vaelchi/functions/measure.py
     F 4:0 euclidean_distance - A (2)
-src/vael/functions/generate.py
+src/vaelchi/functions/generate.py
     F 6:0 connectivity_matrix - A (2)
-src/vael/functions/other.py
+src/vaelchi/functions/other.py
     F 4:0 normalize - B (10)
 
 3 blocks (classes, functions, methods) analyzed.

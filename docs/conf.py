@@ -1,4 +1,4 @@
-"""Build Vael documentation with Sphinx Book Theme."""
+"""Build Vaelchi documentation with Sphinx Book Theme."""
 
 import tomllib
 from pathlib import Path
@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 with (ROOT / "pyproject.toml").open("rb") as stream:
     release = tomllib.load(stream)["project"]["version"]
 version = release
-project = "Vael"
+project = "Vaelchi"
 author = "Rahul Kakodkar"
 copyright = "2023-2026, Rahul Kakodkar"
 
@@ -48,18 +48,18 @@ add_module_names = False
 autodoc_member_order = "bysource"
 
 html_theme = "sphinx_book_theme"
-html_title = "Vael"
-html_logo = "_static/vael-logo-light.png"
+html_title = "Vaelchi"
+html_logo = "_static/vaelchi-logo-light.png"
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 html_context = {"default_mode": "light"}
 html_theme_options = {
     # OpenAI Codex: match the project logo to the selected documentation theme.
     "logo": {
-        "image_light": "_static/vael-logo-light.png",
-        "image_dark": "_static/vael-logo-dark.png",
+        "image_light": "_static/vaelchi-logo-light.png",
+        "image_dark": "_static/vaelchi-logo-dark.png",
     },
-    "repository_url": "https://github.com/cacodcar/vael",
+    "repository_url": "https://github.com/cacodcar/vaelchi",
     "repository_branch": "main",
     "path_to_docs": "docs",
     "use_edit_page_button": True,

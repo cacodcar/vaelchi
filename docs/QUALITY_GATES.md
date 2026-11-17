@@ -1,6 +1,6 @@
 # Enforced quality gates
 
-Vael uses the same Python quality policy as Gana. Run the dedicated environment:
+Vaelchi uses the same Python quality policy as Gana. Run the dedicated environment:
 
 ```sh
 python3.13 -m venv .quality-venv
@@ -20,19 +20,19 @@ No commit or push is needed to run the checks.
 
 - Pytest, with Hypothesis seed 20260928 and isolated test/cache files.
 - Independent statement and branch coverage floors of **90% and 88%**.
-  These preserve Vael's own baseline and are not reduced to Gana's 53%/35%.
+  These preserve Vaelchi's own baseline and are not reduced to Gana's 53%/35%.
 - Radon A/B for every function, method and nested closure. Parse failures fail
   the gate. Maintainability and raw metrics are retained as reports.
 - Ruff lint, Ruff formatting, and full Flake8 checks. Ruff 0.16.9 is pinned,
   with a 79-character formatting target. Flake8 retains strict E501 checking.
 - Mypy checks annotated and unannotated function bodies. Missing dependency
   typing is not ignored. The quality extra pins pandas/SciPy stubs compatible
-  with Vael's numerical environment: pandas-stubs 3.0.5.260914 and scipy-stubs
+  with Vaelchi's numerical environment: pandas-stubs 3.0.5.260914 and scipy-stubs
   1.18.1.1. Scikit-learn's unmarked Python modules are analyzed using
   `follow_untyped_imports`, matching Gana's approach to unmarked dependencies.
 - Sphinx with warnings treated as errors, and `pip check`.
 
-The Ruff rule selection is shared with Gana. Vael keeps its existing stricter
+The Ruff rule selection is shared with Gana. Vaelchi keeps its existing stricter
 positional-argument policy and does not copy Gana-specific exceptions for
 mathematical class names, import cycles, or serialization tests. Tests are now
 included in ordinary Ruff discovery as well as the explicit quality commands.
@@ -66,14 +66,14 @@ prevent comparison of the same workload. Cumulative function times overlap and
 must not be summed.
 
 ```sh
-.quality-venv/bin/python -m pytest tests --function-profile-output /tmp/fresh-vael-profile
+.quality-venv/bin/python -m pytest tests --function-profile-output /tmp/fresh-vaelchi-profile
 .quality-venv/bin/python -m pytest tests --function-profile-reference /path/to/prior/profile.json
 ```
 
 The profiling modules and runner changes were ported from Gana commit
-`cf8f0cd850209db676ee5c04184963de8ab06e2a`. Vael adaptations copy its included
+`cf8f0cd850209db676ee5c04184963de8ab06e2a`. Vaelchi adaptations copy its included
 example into the documentation sandbox and omit Gana's Rust-specific source
-paths. Profiling introduces no runtime dependency into the Vael package.
+paths. Profiling introduces no runtime dependency into the Vaelchi package.
 
 ## Reproducible environment
 
@@ -112,7 +112,7 @@ these quality commands.
 
 ## Preparing a release
 
-Keep the package version in `pyproject.toml` and `src/vael/__init__.py` aligned
+Keep the package version in `pyproject.toml` and `src/vaelchi/__init__.py` aligned
 with the README, changelog, and installation guide. The changelog remains
 unreleased until publication. The default AHC selection policy is `legacy`.
 

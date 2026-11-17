@@ -4,7 +4,7 @@ Cumulative times overlap through the call tree. Use exclusive/self time to
 attribute added time; these instrumented measurements are diagnostic only.
 
 Ported from Gana cf8f0cd850209db676ee5c04184963de8ab06e2a.
-Vael-specific adaptations retain the shared checking and profiling policy.
+Vaelchi-specific adaptations retain the shared checking and profiling policy.
 """
 
 from __future__ import annotations

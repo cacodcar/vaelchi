@@ -5,8 +5,8 @@ import json
 import numpy as np
 import pytest
 
-from vael import ahc
-from vael.functions.legacy import (
+from vaelchi import ahc
+from vaelchi.functions.legacy import (
     find_euclidean_distance,
     generate_connectivity_matrix,
 )

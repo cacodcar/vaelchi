@@ -1,4 +1,4 @@
-src/vael/functions/other.py
+src/vaelchi/functions/other.py
     F 4:0 normalize - B (10)
 
 1 blocks (classes, functions, methods) analyzed.

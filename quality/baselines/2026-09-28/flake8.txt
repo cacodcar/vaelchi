@@ -1,6 +1,6 @@
-src/vael/algorithms/ahc.py:1:7: W292 no newline at end of file
-src/vael/functions/generate.py:29:1: W391 blank line at end of file
-src/vael/functions/other.py:32:80: E501 line too long (85 > 79 characters)
+src/vaelchi/algorithms/ahc.py:1:7: W292 no newline at end of file
+src/vaelchi/functions/generate.py:29:1: W391 blank line at end of file
+src/vaelchi/functions/other.py:32:80: E501 line too long (85 > 79 characters)
 tests/generate_test.py:1:1: F401 'pytest' imported but unused
 tests/generate_test.py:7:80: E501 line too long (82 > 79 characters)
 tests/generate_test.py:29:1: W391 blank line at end of file

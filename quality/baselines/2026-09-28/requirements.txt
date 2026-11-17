@@ -29,5 +29,5 @@ setuptools==84.0.0
 six==1.17.0
 sortedcontainers==2.4.0
 threadpoolctl==3.7.0
-# Editable install with no version control (vael==0.0.1)
--e /Users/cacodcar/Research/packages/vael
+# Editable install with no version control (vaelchi==0.0.1)
+-e /Users/cacodcar/Research/packages/vaelchi

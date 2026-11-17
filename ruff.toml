@@ -1,4 +1,4 @@
-# Vael lint and formatting configuration.
+# Vaelchi lint and formatting configuration.
 # Match the editor, quality environment, hooks and CI.
 required-version = "==0.16.9"
 target-version = "py312"
@@ -33,5 +33,5 @@ max-complexity = 10
 
 [lint.isort]
 # Keep import groups identical in the editor and temporary quality directories.
-known-first-party = ["vael", "quality_checks", "quality", "quality_lock", "profile_context", "profile_stats", "pytest_profile"]
+known-first-party = ["vaelchi", "quality_checks", "quality", "quality_lock", "profile_context", "profile_stats", "pytest_profile"]
 

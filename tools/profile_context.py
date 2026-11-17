@@ -2,7 +2,7 @@
 Capture explicit, non-secret comparison inputs for test function profiles.
 
 Ported from Gana cf8f0cd850209db676ee5c04184963de8ab06e2a.
-Vael-specific adaptations retain the shared checking and profiling policy.
+Vaelchi-specific adaptations retain the shared checking and profiling policy.
 """
 
 from __future__ import annotations
@@ -18,7 +18,7 @@ from typing import Any
 
 from profile_stats import SCHEMA, file_hashes, fingerprint, write_json
 
-PROJECTS = ("gana", "vael")
+PROJECTS = ("gana", "vaelchi")
 THREAD_VARIABLES = (
     "OMP_NUM_THREADS",
     "OPENBLAS_NUM_THREADS",
@@ -104,7 +104,9 @@ def environment() -> dict[str, Any]:
         for dist in metadata.distributions()
     }
     dependencies = {
-        k: v for k, v in versions.items() if k.lower() not in {"gana", "vael"}
+        k: v
+        for k, v in versions.items()
+        if k.lower() not in {"gana", "vaelchi"}
     }
     return {
         "python": platform.python_version(),

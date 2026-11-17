@@ -1,7 +1,7 @@
 Runnable example
 ================
 
-From an installed Vael environment, run this command at the repository root:
+From an installed Vaelchi environment, run this command at the repository root:
 
 .. code-block:: console
 

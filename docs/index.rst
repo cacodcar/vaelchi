@@ -1,5 +1,5 @@
-Time-series clustering with Vael
-================================
+Time-series clustering with Vaelchi
+===================================
 
 .. include:: ../README.md
    :parser: myst_parser.sphinx_
@@ -38,6 +38,7 @@ Time-series clustering with Vael
    license
    QUALITY_GATES
    QUALITY
+   RELEASING
 
 API reference
 -------------
@@ -45,9 +46,9 @@ API reference
 .. autosummary::
    :nosignatures:
 
-   vael.fill_missing_values
-   vael.ahc
-   vael.AHCResult
+   vaelchi.fill_missing_values
+   vaelchi.ahc
+   vaelchi.AHCResult
 
 Indices and tables
 ------------------

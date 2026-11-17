@@ -3,7 +3,7 @@
 from numpy.testing import assert_array_equal
 
 #  use the renamed public package.
-from vael.functions.generate import connectivity_matrix
+from vaelchi.functions.generate import connectivity_matrix
 
 
 def test_connectivity_matrix():

@@ -1,12 +1,12 @@
 unformatted: File would be reformatted
- --> src/vael/algorithms/ahc.py:1:7
+ --> src/vaelchi/algorithms/ahc.py:1:7
   |
   - """"""
 1 + """"""
   |
 
 unformatted: File would be reformatted
-  --> src/vael/functions/generate.py:27:1
+  --> src/vaelchi/functions/generate.py:27:1
    |
 26 |     return _matrix
    -

@@ -1,22 +1,22 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/cacodcar/vael/main/docs/_static/vael-logo-dark.png#gh-dark-mode-only" alt="Vael logo" width="75%">
-  <img src="https://raw.githubusercontent.com/cacodcar/vael/main/docs/_static/vael-logo-light.png#gh-light-mode-only" alt="Vael logo" width="75%">
+  <img src="https://raw.githubusercontent.com/cacodcar/vaelchi/main/docs/_static/vaelchi-logo-dark.png#gh-dark-mode-only" alt="Vaelchi logo" width="75%">
+  <img src="https://raw.githubusercontent.com/cacodcar/vaelchi/main/docs/_static/vaelchi-logo-light.png#gh-light-mode-only" alt="Vaelchi logo" width="75%">
 </p>
 
 <!-- Version and documentation -->
-[![Version](https://img.shields.io/badge/version-0.1.0--pre--alpha-orange)](https://github.com/cacodcar/vael/blob/main/CHANGELOG.md)
-[![Python Versions](https://img.shields.io/badge/python-3.12%2B-blue)](https://github.com/cacodcar/vael/blob/main/pyproject.toml)
-[![Documentation](https://img.shields.io/badge/docs-source-blue)](https://github.com/cacodcar/vael/tree/main/docs)
+[![Version](https://img.shields.io/badge/version-0.1.0--pre--alpha-orange)](https://github.com/cacodcar/vaelchi/blob/main/CHANGELOG.md)
+[![Python Versions](https://img.shields.io/badge/python-3.12%2B-blue)](https://github.com/cacodcar/vaelchi/blob/main/pyproject.toml)
+[![Documentation](https://img.shields.io/badge/docs-source-blue)](https://github.com/cacodcar/vaelchi/tree/main/docs)
 
 <!-- Quality and development -->
-[![Quality](https://github.com/cacodcar/vael/actions/workflows/quality.yml/badge.svg)](https://github.com/cacodcar/vael/actions/workflows/quality.yml)
-[![Coverage](https://codecov.io/gh/cacodcar/vael/graph/badge.svg)](https://codecov.io/gh/cacodcar/vael)
-[![License](https://img.shields.io/github/license/cacodcar/vael)](https://github.com/cacodcar/vael/blob/main/LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/cacodcar/vael)](https://github.com/cacodcar/vael/commits/main)
+[![Quality](https://github.com/cacodcar/vaelchi/actions/workflows/quality.yml/badge.svg)](https://github.com/cacodcar/vaelchi/actions/workflows/quality.yml)
+[![Coverage](https://codecov.io/gh/cacodcar/vaelchi/graph/badge.svg)](https://codecov.io/gh/cacodcar/vaelchi)
+[![License](https://img.shields.io/github/license/cacodcar/vaelchi)](https://github.com/cacodcar/vaelchi/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/cacodcar/vaelchi)](https://github.com/cacodcar/vaelchi/commits/main)
 
-# Vael
+# Vaelchi
 
-Vael is a standalone Python package for time-series preprocessing,
+Vaelchi is a standalone Python package for time-series preprocessing,
 clustering, and representative periods. Version **0.1.0** is the first pre-alpha
 release candidate, providing adjacency-constrained agglomerative hierarchical
 clustering (AHC) for one or more aligned numeric time series.
@@ -32,11 +32,11 @@ clustering (AHC) for one or more aligned numeric time series.
 
 ## Installation
 
-Python 3.12 or newer is required. Clone the repository and install Vael:
+Python 3.12 or newer is required. Clone the repository and install Vaelchi:
 
 ```sh
-git clone https://github.com/cacodcar/vael.git
-cd vael
+git clone https://github.com/cacodcar/vaelchi.git
+cd vaelchi
 python -m pip install .
 ```
 
@@ -50,8 +50,8 @@ Version 0.1.0 is available from this repository; it has not been published to Py
 You can also install a supplied release wheel in a separate environment:
 
 ```sh
-python -m pip install /path/to/vael-0.1.0-py3-none-any.whl
-python -c "import vael; print(vael.__version__)"
+python -m pip install /path/to/vaelchi-0.1.0-py3-none-any.whl
+python -c "import vaelchi; print(vaelchi.__version__)"
 ```
 
 The printed version should be `0.1.0`. The pre-alpha API may change in later
@@ -61,7 +61,7 @@ releases.
 
 ```python
 
-from vael import ahc
+from vaelchi import ahc
 
 result = ahc(
     [10, 12, 10, 12, 20, 24, 20, 24],
@@ -104,9 +104,9 @@ python -m sphinx -W --keep-going -b html docs docs/_build/html
 ```
 
 Open `docs/_build/html/index.html`. For the output contract, see
-[Clustering](https://github.com/cacodcar/vael/blob/main/docs/CLUSTERING.md).
+[Clustering](https://github.com/cacodcar/vaelchi/blob/main/docs/CLUSTERING.md).
 Quality commands are documented in
-[Quality gates](https://github.com/cacodcar/vael/blob/main/docs/QUALITY_GATES.md).
+[Quality gates](https://github.com/cacodcar/vaelchi/blob/main/docs/QUALITY_GATES.md).
 
 ## License and authorship
 

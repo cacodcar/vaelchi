@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from vael import fill_missing_values
+from vaelchi import fill_missing_values
 
 
 def test_weekend_and_holiday_preserve_observations_and_input():

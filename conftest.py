@@ -1,7 +1,7 @@
 """Enable automatic function profiles for all repository pytest commands.
 
 Ported from Gana cf8f0cd850209db676ee5c04184963de8ab06e2a.
-Vael-specific adaptations retain the shared checking and profiling policy.
+Vaelchi-specific adaptations retain the shared checking and profiling policy.
 """
 
 import sys

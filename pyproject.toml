@@ -3,7 +3,7 @@ requires = ["setuptools>=77.0.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "vael"
+name = "vaelchi"
 version = "0.1.0"
 authors = [
   { name="Rahul Kakodkar", email="cacodcar@gmail.com" },
@@ -13,7 +13,8 @@ maintainers = [
 ]
 description = "Time-series clustering and representative periods"
 requires-python = ">=3.12"
-readme = "README.md"
+# OpenAI Codex: use one light-mode logo in PyPI's project description.
+readme = "README-PYPI.md"
 license = "MIT"
 license-files = ["LICENSE"]
 keywords = ["representative days", "modeling", "energy systems", "clustering"]
@@ -50,8 +51,8 @@ docs = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/cacodcar/vael"
-Issues = "https://github.com/cacodcar/vael/issues"
+Homepage = "https://github.com/cacodcar/vaelchi"
+Issues = "https://github.com/cacodcar/vaelchi/issues"
 
 
 #  resolve the public package in local tests.
@@ -60,7 +61,7 @@ pythonpath = ["src"]
 
 #  independent measured coverage floors.
 [tool.research-quality]
-package = "vael"
+package = "vaelchi"
 statement-floor = 90
 branch-floor = 88
 local-dependencies = []
@@ -81,7 +82,7 @@ mypy_path = ["$MYPY_CONFIG_FILE_DIR/src", "$MYPY_CONFIG_FILE_DIR/tools"]
 module = ["sklearn", "sklearn.*"]
 follow_untyped_imports = true
 
-#  ship only the Vael source namespace.
+#  ship only the Vaelchi source namespace.
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["vael", "vael.*"]
+include = ["vaelchi", "vaelchi.*"]

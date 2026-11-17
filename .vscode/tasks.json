@@ -13,7 +13,7 @@
   },
   "tasks": [
     {
-      "label": "Vael: Test Coverage",
+      "label": "Vaelchi: Test Coverage",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -27,7 +27,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: Cyclomatic Complexity",
+      "label": "Vaelchi: Cyclomatic Complexity",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -38,7 +38,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: Maintainability Index",
+      "label": "Vaelchi: Maintainability Index",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -49,7 +49,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: Raw Metrics",
+      "label": "Vaelchi: Raw Metrics",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -60,7 +60,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: Lint",
+      "label": "Vaelchi: Lint",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -71,7 +71,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: Format Check",
+      "label": "Vaelchi: Format Check",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -82,7 +82,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: Type Check",
+      "label": "Vaelchi: Type Check",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -93,7 +93,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: Documentation Build",
+      "label": "Vaelchi: Documentation Build",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -104,7 +104,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: Dependency Check",
+      "label": "Vaelchi: Dependency Check",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -115,7 +115,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: All Quality Checks",
+      "label": "Vaelchi: All Quality Checks",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -126,7 +126,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: Locked Quality Baseline",
+      "label": "Vaelchi: Locked Quality Baseline",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -138,7 +138,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: Python Version Matrix",
+      "label": "Vaelchi: Python Version Matrix",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -149,7 +149,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: Complexity B or worse report",
+      "label": "Vaelchi: Complexity B or worse report",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -166,7 +166,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: Build Distributions",
+      "label": "Vaelchi: Build Distributions",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [
@@ -177,7 +177,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Vael: Run Example",
+      "label": "Vaelchi: Run Example",
       "type": "process",
       "command": "${workspaceFolder}/.quality-venv/bin/python",
       "args": [

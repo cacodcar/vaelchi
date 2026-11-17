@@ -1,4 +1,4 @@
-# Working on Vael
+# Working on Vaelchi
 
 Changes require explicit task approval. Complete approved scope without asking
 again. Commits, pushes, merges, publication, deletion, and archival require

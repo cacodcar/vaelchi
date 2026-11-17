@@ -1,7 +1,7 @@
 Filling missing calendar values
 ===============================
 
-``vael.fill_missing_values`` completes a timestamp-indexed pandas Series or
+``vaelchi.fill_missing_values`` completes a timestamp-indexed pandas Series or
 DataFrame. It inserts missing calendar rows and fills missing cells using the
 chosen policy. The result preserves column names and physical units for
 further analysis.
@@ -16,7 +16,7 @@ last available observation forward:
 
    
    import pandas as pd
-   from vael import fill_missing_values
+   from vaelchi import fill_missing_values
 
    prices = pd.Series(
        [10.0, 12.0],

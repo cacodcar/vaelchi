@@ -1,5 +1,5 @@
 W292 [*] No newline at end of file
- --> src/vael/algorithms/ahc.py:1:7
+ --> src/vaelchi/algorithms/ahc.py:1:7
   |
 1 | """"""
   |       ^
@@ -10,7 +10,7 @@ help: Add trailing newline
   |
 
 TRY003 Avoid specifying long messages outside the exception class
-  --> src/vael/functions/other.py:34:11
+  --> src/vaelchi/functions/other.py:34:11
    |
 32 |         return [normalize(i) if isinstance(i, list) else i / max(data) for i in data]
 33 |

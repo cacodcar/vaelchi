@@ -1,7 +1,7 @@
 {
   "pytest": {
     "command": [
-      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "/Users/cacodcar/Research/packages/vaelchi/.venv/bin/python",
       "-m",
       "pytest",
       "tests",
@@ -14,11 +14,11 @@
   },
   "complexity": {
     "command": [
-      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "/Users/cacodcar/Research/packages/vaelchi/.venv/bin/python",
       "-m",
       "radon",
       "cc",
-      "src/vael",
+      "src/vaelchi",
       "-s",
       "-a"
     ],
@@ -26,11 +26,11 @@
   },
   "complexity-b-plus": {
     "command": [
-      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "/Users/cacodcar/Research/packages/vaelchi/.venv/bin/python",
       "-m",
       "radon",
       "cc",
-      "src/vael",
+      "src/vaelchi",
       "--min",
       "B",
       "-s",
@@ -40,28 +40,28 @@
   },
   "maintainability": {
     "command": [
-      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "/Users/cacodcar/Research/packages/vaelchi/.venv/bin/python",
       "-m",
       "radon",
       "mi",
-      "src/vael",
+      "src/vaelchi",
       "-s"
     ],
     "exit_code": 0
   },
   "raw": {
     "command": [
-      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "/Users/cacodcar/Research/packages/vaelchi/.venv/bin/python",
       "-m",
       "radon",
       "raw",
-      "src/vael"
+      "src/vaelchi"
     ],
     "exit_code": 0
   },
   "flake8": {
     "command": [
-      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "/Users/cacodcar/Research/packages/vaelchi/.venv/bin/python",
       "-m",
       "flake8",
       "src",
@@ -71,7 +71,7 @@
   },
   "ruff": {
     "command": [
-      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "/Users/cacodcar/Research/packages/vaelchi/.venv/bin/python",
       "-m",
       "ruff",
       "check",
@@ -82,7 +82,7 @@
   },
   "format": {
     "command": [
-      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "/Users/cacodcar/Research/packages/vaelchi/.venv/bin/python",
       "-m",
       "ruff",
       "format",
@@ -94,7 +94,7 @@
   },
   "pip-check": {
     "command": [
-      "/Users/cacodcar/Research/packages/vael/.venv/bin/python",
+      "/Users/cacodcar/Research/packages/vaelchi/.venv/bin/python",
       "-m",
       "pip",
       "check"

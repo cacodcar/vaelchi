@@ -1,13 +1,13 @@
 """Behavioral checks for chronology-constrained representative periods.
 
-Ported expectations use NumPy assertions under Vael's lint policy.
+Ported expectations use NumPy assertions under Vaelchi's lint policy.
 """
 #  assertion API adaptation.
 
 import numpy as np
 import pytest
 
-from vael import ahc
+from vaelchi import ahc
 
 
 def test_known_clusters_and_mapping():

@@ -1,4 +1,4 @@
-# Vael code quality configuration.
+# Vaelchi code quality configuration.
 engines:
   python:
     enabled: true

@@ -1,11 +1,11 @@
 # Time-series clustering
 
-Vael is a standalone package for clustering aligned numeric time series.
-`from vael import ahc, AHCResult` is the public API.
+Vaelchi is a standalone package for clustering aligned numeric time series.
+`from vaelchi import ahc, AHCResult` is the public API.
 
 ```python
 
-from vael import ahc
+from vaelchi import ahc
 
 result = ahc([10, 11, 12, 11, 20, 21, 22, 21], periods=2)
 reconstructed = result.reconstruct()
@@ -45,9 +45,9 @@ labels and weights address the selected rows independently. The alternative
 ties chronologically. One-cluster legacy input uses the existing nearest-member
 fallback. Defaults, error definitions, and numerical choices are unchanged.
 
-`vael.functions.legacy` provides the historical standalone squared-distance
+`vaelchi.functions.legacy` provides the historical standalone squared-distance
 and connectivity helper APIs, including their edge behavior. The newer helpers
-in `vael.functions` remain available. AHC uses its sparse adjacency internally.
+in `vaelchi.functions` remain available. AHC uses its sparse adjacency internally.
 
 ## Authorship and historical validation
 
@@ -56,9 +56,9 @@ Revision identifiers and adaptation credits are recorded in the source files.
 
 The following measurements describe the historical validation snapshot.
 
-- 26 tests passed in Vael's standalone environment.
+- 26 tests passed in Vaelchi's standalone environment.
 - AHC, result and legacy helper modules had 100% statement and branch coverage.
-- Entire Vael coverage was 90.53% of statements and 88% of branches.
+- Entire Vaelchi coverage was 90.53% of statements and 88% of branches.
 - All functions and classes had Radon A/B complexity, and all modules had
   maintainability rank A.
 - 26 exact comparisons to the saved reference implementation covered five

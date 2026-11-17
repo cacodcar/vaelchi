@@ -1,4 +1,4 @@
-src/vael/__init__.py
+src/vaelchi/__init__.py
     LOC: 0
     LLOC: 0
     SLOC: 0
@@ -10,7 +10,7 @@ src/vael/__init__.py
         (C % L): 0%
         (C % S): 0%
         (C + M % L): 0%
-src/vael/algorithms/ahc.py
+src/vaelchi/algorithms/ahc.py
     LOC: 1
     LLOC: 1
     SLOC: 0
@@ -22,7 +22,7 @@ src/vael/algorithms/ahc.py
         (C % L): 0%
         (C % S): 0%
         (C + M % L): 0%
-src/vael/algorithms/__init__.py
+src/vaelchi/algorithms/__init__.py
     LOC: 0
     LLOC: 0
     SLOC: 0
@@ -34,7 +34,7 @@ src/vael/algorithms/__init__.py
         (C % L): 0%
         (C % S): 0%
         (C + M % L): 0%
-src/vael/functions/measure.py
+src/vaelchi/functions/measure.py
     LOC: 16
     LLOC: 4
     SLOC: 2
@@ -46,7 +46,7 @@ src/vael/functions/measure.py
         (C % L): 0%
         (C % S): 0%
         (C + M % L): 56%
-src/vael/functions/generate.py
+src/vaelchi/functions/generate.py
     LOC: 29
     LLOC: 9
     SLOC: 7
@@ -58,7 +58,7 @@ src/vael/functions/generate.py
         (C % L): 3%
         (C % S): 14%
         (C + M % L): 34%
-src/vael/functions/other.py
+src/vaelchi/functions/other.py
     LOC: 34
     LLOC: 16
     SLOC: 14

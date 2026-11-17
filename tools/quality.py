@@ -5,7 +5,7 @@ an independently named report directory. Use --baseline to require the recorded
 hash-locked environment before running all gates.
 
 Ported from Gana cf8f0cd850209db676ee5c04184963de8ab06e2a.
-Vael-specific adaptations retain the shared checking and profiling policy.
+Vaelchi-specific adaptations retain the shared checking and profiling policy.
 """
 
 from __future__ import annotations
@@ -278,7 +278,7 @@ def isolated_documentation(work: Path, arguments: list[str]) -> list[str]:
     """
     root = work / "documentation"
     source = root / "docs"
-    # Vael's documentation includes the runnable example outside docs/.
+    # Vaelchi's documentation includes the runnable example outside docs/.
     for name in ("docs", "examples"):
         shutil.copytree(
             ROOT / name,

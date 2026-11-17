@@ -2,13 +2,13 @@ Clustering and consuming results
 ================================
 
 Pass aligned one-dimensional numeric series as positional arguments to
-:func:`vael.ahc`. Their order defines the feature axis of the result.
+:func:`vaelchi.ahc`. Their order defines the feature axis of the result.
 ``period_length`` is the number of samples in each period; ``periods`` is the
 number of representative periods to retain per parent group. If provided,
 ``parent_length`` counts original periods within each independently clustered
 parent group. Inputs must contain complete periods and complete parent groups.
 
-Vael constrains clustering to adjacent periods, without wraparound. The default
+Vaelchi constrains clustering to adjacent periods, without wraparound. The default
 ``selection="legacy"`` uses a global distance lookup to select profiles.
 Use ``selection="nearest_centroid"`` to choose an observed member of each cluster,
 with chronological tie breaking. The runnable example uses this explicit option.
@@ -16,7 +16,7 @@ with chronological tie breaking. The runnable example uses this explicit option.
 Output contract
 ---------------
 
-:class:`vael.AHCResult` exposes representative profiles in original input units,
+:class:`vaelchi.AHCResult` exposes representative profiles in original input units,
 a representative-row label for every original period, selected original-period
 indices, weights, and two standardized squared-error measures. Weights count
 periods; they are not probabilities or time durations.
