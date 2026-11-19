@@ -52,8 +52,8 @@ html_title = "Vaelchi"
 html_logo = "_static/vaelchi-logo-light.png"
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
-# OpenAI Codex: start in dark mode and retain the visitor's saved selection.
-html_context = {"default_mode": "dark"}
+# OpenAI Codex: follow the system theme until the visitor chooses Light or Dark.
+html_context = {"default_mode": "auto"}
 templates_path = ["_templates"]
 html_theme_options = {
     # OpenAI Codex: match the project logo to the selected documentation theme.
