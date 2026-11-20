@@ -5,6 +5,18 @@ All notable changes to this project will be documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+- Add Euclidean k-means for observed representative periods, with independent
+  parent groups, reproducible initialization, and shared reconstruction/error
+  semantics. Uses the existing scikit-learn dependency.
+- Add exact standalone absolute-cost DTW, accumulated matrices, and forward
+  zero-based paths. Correct the free-prefix initialization and backtracking
+  behavior in the Energia v1.0.7 source, retaining its MIT attribution.
+- Add `ClusterResult` for common clustering output and `DTWResult` for
+  alignments. Preserve `AHCResult` as a compatible subclass with unchanged
+  constructor fields/defaults and dictionary keys.
+
 ## 0.1.1 (Unreleased)
 
 - Default to `selection="nearest_centroid"` so each cluster receives one of

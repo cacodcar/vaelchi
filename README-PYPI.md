@@ -18,6 +18,9 @@ python -m pip install vaelchi
 
 - Cluster consecutive periods with adjacency-constrained agglomerative
   hierarchical clustering (AHC).
+- Group nonadjacent periods with reproducible Euclidean k-means.
+- Align unequal-length scalar sequences with exact absolute-cost DTW.
+- Use shared clustering results while retaining `AHCResult` compatibility.
 - Complete timestamped calendars and fill missing values using forward fill,
   backward fill, or time interpolation.
 - Select observed representative profiles and retain their original units.

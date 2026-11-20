@@ -11,6 +11,7 @@ Time-series analysis with Vaelchi
 
    tutorials/getting_started/index
    tutorials/filling_missing_values
+   tutorials/kmeans_and_dtw
    CLUSTERING
 
 .. toctree::
@@ -48,7 +49,11 @@ API reference
 
    vaelchi.fill_missing_values
    vaelchi.ahc
+   vaelchi.kmeans
+   vaelchi.dtw
+   vaelchi.ClusterResult
    vaelchi.AHCResult
+   vaelchi.DTWResult
 
 Indices and tables
 ------------------

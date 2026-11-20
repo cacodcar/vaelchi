@@ -13,10 +13,26 @@ Clustering
 
 .. autofunction:: ahc
 
-Result
-------
+.. autofunction:: kmeans
+
+Clustering results
+------------------
+
+.. autoclass:: ClusterResult
+   :members:
 
 .. autoclass:: AHCResult
+
+Dynamic time warping
+--------------------
+
+.. autofunction:: dtw
+
+.. autofunction:: dtw_matrix
+
+.. autofunction:: dtw_path
+
+.. autoclass:: DTWResult
    :members:
 
 Compatibility helpers
