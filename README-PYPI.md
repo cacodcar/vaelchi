@@ -2,9 +2,9 @@
 
 # Vaelchi
 
-Vaelchi is a Python package for time-series analysis, including preprocessing,
-clustering, and representative periods. Version **0.1.0** is the first
-**pre-alpha** release; the API may change in later releases.
+Vaelchi is a **pre-alpha** Python package for time-series analysis, including
+preprocessing, clustering, and representative periods. Its API may change in
+later releases.
 
 ## Installation
 
@@ -32,7 +32,6 @@ result = ahc(
     [10, 12, 10, 12, 20, 24, 20, 24],
     periods=2,
     period_length=2,
-    selection="nearest_centroid",
 )
 print(result.weights)  # [2 2]
 payload = result.to_dict()
@@ -41,9 +40,9 @@ chronological_values = result.reconstruct()
 
 Each positional input is one feature. Four two-timestep periods become two
 representative periods. Profiles retain input units; weights count the original
-periods assigned to each representative. The default selection policy is
-`legacy`; this example explicitly selects `nearest_centroid` to choose an
-observed member of each cluster.
+periods assigned to each representative. The default, `nearest_centroid`,
+selects an observed member of each cluster. Pass `selection="legacy"` to
+reproduce the Vaelchi 0.1.0 default.
 
 See the [repository and installation guide](https://github.com/cacodcar/vaelchi),
 [examples](https://github.com/cacodcar/vaelchi/tree/main/docs/examples), and

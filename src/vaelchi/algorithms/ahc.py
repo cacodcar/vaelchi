@@ -189,7 +189,7 @@ def ahc(
     periods: int,
     period_length: int = 1,
     parent_length: int | None = None,
-    selection: Literal["nearest_centroid", "legacy"] = "legacy",
+    selection: Literal["nearest_centroid", "legacy"] = "nearest_centroid",
 ) -> AHCResult:
     """Cluster aligned one-dimensional series into representative periods.
 
@@ -201,20 +201,15 @@ def ahc(
     :param parent_length: Original periods per independent parent group, e.g.
         365 days per year. Defaults to all periods in one group. All parent
         groups must be complete; clustering never crosses their boundaries.
-    :param selection: Defaults to ``legacy``. ``nearest_centroid`` selects
-        the nearest cluster member,
-        breaking numerical ties with the earliest period. ``legacy`` reproduces
-        historical centroid-label association and representative lookup,
-        including
-        possible repeated or out-of-cluster representatives. Both policies
-        retain
-        the corrected error metrics. For a single cluster, where the historical
-        NearestCentroid call cannot run, use nearest-member selection.
+    :param selection: The default, ``nearest_centroid``, selects the nearest
+        cluster member, breaking numerical ties with the earliest period.
+        Specify ``legacy`` to reproduce the historical representative lookup,
+        which can repeat a period or select outside a cluster. Both policies
+        use nearest-member selection for a single cluster.
 
     Each feature/timestep column is standardized across periods within its
     parent group, matching the legacy profile scaling. Ward linkage uses a
-    linear adjacency graph (no wraparound). Legacy representative selection is
-    the default; nearest-centroid selection is an explicit alternative.
+    linear adjacency graph (no wraparound).
     Inputs are not modified. This function does not construct a reduced model.
     """
     profiles, periods, parent_length = _prepare_profiles(

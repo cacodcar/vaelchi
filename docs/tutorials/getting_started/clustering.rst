@@ -8,10 +8,10 @@ number of representative periods to retain per parent group. If provided,
 ``parent_length`` counts original periods within each independently clustered
 parent group. Inputs must contain complete periods and complete parent groups.
 
-Vaelchi constrains clustering to adjacent periods, without wraparound. The default
-``selection="legacy"`` uses a global distance lookup to select profiles.
-Use ``selection="nearest_centroid"`` to choose an observed member of each cluster,
-with chronological tie breaking. The runnable example uses this explicit option.
+Vaelchi constrains clustering to adjacent periods, without wraparound. The
+default ``selection="nearest_centroid"`` chooses an observed member of each
+cluster, with chronological tie breaking. Pass ``selection="legacy"`` to
+reproduce the Vaelchi 0.1.0 default.
 
 Output contract
 ---------------
