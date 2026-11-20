@@ -11,6 +11,7 @@
 
 <!-- Quality and development -->
 [![Quality](https://github.com/cacodcar/vaelchi/actions/workflows/quality.yml/badge.svg)](https://github.com/cacodcar/vaelchi/actions/workflows/quality.yml)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/908094a913d94522a0aec929f213f0cb)](https://app.codacy.com/gh/cacodcar/vaelchi/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![Coverage](https://codecov.io/gh/cacodcar/vaelchi/graph/badge.svg)](https://codecov.io/gh/cacodcar/vaelchi)
 [![License](https://img.shields.io/github/license/cacodcar/vaelchi)](https://github.com/cacodcar/vaelchi/blob/main/LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/cacodcar/vaelchi)](https://github.com/cacodcar/vaelchi/commits/main)
