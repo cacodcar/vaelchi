@@ -5,7 +5,7 @@
 
 <!-- Version and documentation -->
 [![PyPI](https://img.shields.io/pypi/v/vaelchi)](https://pypi.org/project/vaelchi/)
-[![Version](https://img.shields.io/badge/version-0.1.0--pre--alpha-orange)](https://github.com/cacodcar/vaelchi/blob/main/CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.1.1--pre--alpha-orange)](https://github.com/cacodcar/vaelchi/blob/main/CHANGELOG.md)
 [![Python Versions](https://img.shields.io/badge/python-3.12%2B-blue)](https://github.com/cacodcar/vaelchi/blob/main/pyproject.toml)
 [![Documentation](https://img.shields.io/readthedocs/vaelchi/latest)](https://vaelchi.readthedocs.io/en/latest/index.html)
 
@@ -17,10 +17,9 @@
 
 # Vaelchi
 
-Vaelchi is a Python package for time-series analysis, including preprocessing,
-clustering, and representative periods. Version **0.1.0** is the first pre-alpha
-release, providing adjacency-constrained agglomerative hierarchical
-clustering (AHC) for one or more aligned numeric time series.
+Vaelchi is a pre-alpha Python package for time-series analysis. It provides
+preprocessing and adjacency-constrained agglomerative hierarchical clustering
+(AHC) for one or more aligned numeric time series.
 
 ## Features
 
@@ -40,8 +39,8 @@ python -m pip install vaelchi
 python -c "import vaelchi; print(vaelchi.__version__)"
 ```
 
-The printed version should be `0.1.0`. The pre-alpha API may change in later
-releases.
+The version check prints the installed version. The pre-alpha API may change
+in later releases.
 
 For development, clone the repository and install the optional tools:
 
@@ -61,7 +60,6 @@ result = ahc(
     [10, 12, 10, 12, 20, 24, 20, 24],
     periods=2,
     period_length=2,
-    selection="nearest_centroid",
 )
 payload = result.to_dict()
 chronological_values = result.reconstruct()
@@ -71,9 +69,8 @@ print(payload["weights"])  # [2, 2]
 Each positional input is one feature. Here, four two-timestep periods become
 two representative periods. `labels` maps each original period to a representative
 row; `weights` counts the original periods assigned to each row. Profiles retain
-input units. The default selection mode is `legacy`, which uses a global
-distance lookup to select profiles. The example explicitly selects
-`nearest_centroid` to choose an observed member of each cluster.
+input units. The default, `nearest_centroid`, selects an observed member of
+each cluster. Pass `selection="legacy"` to reproduce the Vaelchi 0.1.0 default.
 
 ## License and authorship
 

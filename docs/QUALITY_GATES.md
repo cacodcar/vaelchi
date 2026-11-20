@@ -114,7 +114,7 @@ these quality commands.
 
 Keep the package version in `pyproject.toml` and `src/vaelchi/__init__.py` aligned
 with the README, changelog, and installation guide. The changelog remains
-unreleased until publication. The default AHC selection policy is `legacy`.
+unreleased until publication.
 
 Run the complete gates and Python matrix before building:
 

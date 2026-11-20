@@ -1,7 +1,7 @@
 Installation
 ============
 
-Vaelchi 0.1.0 requires Python 3.12 or newer. Its runtime dependencies are NumPy,
+Vaelchi requires Python 3.12 or newer. Its runtime dependencies are NumPy,
 pandas, SciPy, and scikit-learn.
 
 Install Vaelchi from PyPI in a virtual environment:
@@ -13,8 +13,8 @@ Install Vaelchi from PyPI in a virtual environment:
    python -m pip install vaelchi
    python -c "import vaelchi; print(vaelchi.__version__)"
 
-The version printed should be ``0.1.0``. On Windows, activate the environment
-with ``.venv\Scripts\activate`` instead.
+The version check prints the installed version. On Windows, activate the
+environment with ``.venv\Scripts\activate`` instead.
 
 For an editable development installation, clone the repository and install the
 optional tools:
@@ -37,6 +37,6 @@ wheel into a separate environment:
 
 .. code-block:: console
 
-   python -m pip install dist/vaelchi-0.1.0-py3-none-any.whl
+   python -m pip install dist/vaelchi-0.1.1-py3-none-any.whl
 
 Building distributions does not publish them.

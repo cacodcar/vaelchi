@@ -38,12 +38,12 @@ Applications can map the columns to their own components and use the weights
 when constructing reduced models.
 
 Scaling is per feature/timestep column within each parent. Adjacency is linear,
-without wraparound. The default `selection="legacy"` uses a global distance lookup,
-including repeated or out-of-cluster representatives. Do not deduplicate rows:
-labels and weights address the selected rows independently. The alternative
-`selection="nearest_centroid"` selects a cluster member and resolves numerical
-ties chronologically. One-cluster legacy input uses the existing nearest-member
-fallback. Defaults, error definitions, and numerical choices are unchanged.
+without wraparound. The default `selection="nearest_centroid"` selects a cluster
+member and resolves numerical ties chronologically. Specify `selection="legacy"`
+to reproduce the Vaelchi 0.1.0 default. Legacy mode uses a global distance
+lookup that can repeat a representative or select outside its cluster. Preserve
+all representative rows because labels and weights address them independently.
+Both policies select the nearest member for a single cluster.
 
 `vaelchi.functions.legacy` provides the historical standalone squared-distance
 and connectivity helper APIs, including their edge behavior. The newer helpers

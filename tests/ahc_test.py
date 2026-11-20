@@ -119,22 +119,21 @@ def test_legacy_selection_and_corrected_errors(parents):
     """Legacy selection and corrected errors."""
     block = np.array([10, 11, 12, 11, 20, 21, 22, 21])
     values = np.concatenate([block + 100 * p for p in range(parents)])
-    legacy = ahc(values, periods=2, parent_length=8)
-    explicit_legacy = ahc(
+    legacy = ahc(
         values,
         periods=2,
         parent_length=8,
         selection="legacy",
     )
+    current = ahc(values, periods=2, parent_length=8)
+    # OpenAI Codex: the default selects one member of each cluster.
     np.testing.assert_array_equal(
-        legacy.representative_indices,
-        explicit_legacy.representative_indices,
+        current.representative_indices,
+        [index for p in range(parents) for index in (8 * p + 1, 8 * p + 5)],
     )
-    current = ahc(
-        values,
-        periods=2,
-        parent_length=8,
-        selection="nearest_centroid",
+    np.testing.assert_array_equal(
+        current.labels[current.representative_indices],
+        np.arange(2 * parents),
     )
     np.testing.assert_array_equal(
         legacy.representative_indices,
@@ -142,6 +141,7 @@ def test_legacy_selection_and_corrected_errors(parents):
     )
     np.testing.assert_array_equal(legacy.labels, current.labels)
     np.testing.assert_array_equal(legacy.weights, [4] * (2 * parents))
+    np.testing.assert_array_equal(current.weights, legacy.weights)
     np.testing.assert_array_equal(
         legacy.reconstruct()[:, 0],
         np.concatenate([np.full(8, 12 + 100 * p) for p in range(parents)]),
