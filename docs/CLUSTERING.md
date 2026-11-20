@@ -1,7 +1,11 @@
 # Time-series clustering
 
 Vaelchi is a standalone package for clustering aligned numeric time series.
-`from vaelchi import ahc, AHCResult` is the public API.
+`ahc` and `kmeans` share the `ClusterResult` output contract. AHC continues to
+return `AHCResult`, now a subclass of `ClusterResult`; existing imports,
+constructor fields/defaults, pickle paths, and dictionary keys are preserved.
+Standalone `dtw`, `dtw_matrix`, and `dtw_path` align scalar sequences; they do
+not perform clustering. See the [worked examples](tutorials/kmeans_and_dtw.rst).
 
 ```python
 
@@ -37,13 +41,45 @@ scalars. A consumer can use `numpy.asarray(payload["representatives"])[payload[
 Applications can map the columns to their own components and use the weights
 when constructing reduced models.
 
-Scaling is per feature/timestep column within each parent. Adjacency is linear,
-without wraparound. The default `selection="nearest_centroid"` selects a cluster
+Scaling is per feature/timestep column within each parent. AHC adjacency is
+linear, without wraparound. Its default `selection="nearest_centroid"` selects a cluster
 member and resolves numerical ties chronologically. Specify `selection="legacy"`
 to reproduce the Vaelchi 0.1.0 default. Legacy mode uses a global distance
 lookup that can repeat a representative or select outside its cluster. Preserve
 all representative rows because labels and weights address them independently.
 Both policies select the nearest member for a single cluster.
+
+K-means uses Euclidean Lloyd iterations with k-means++ initialization. It can
+group nonadjacent periods and always selects the nearest observed member of
+each final cluster. It does not expose the AHC-only `legacy` selection policy.
+Both algorithms order nearest-centroid clusters by their earliest member;
+k-means representative indices themselves need not be increasing. Labels
+retain the mapping to the original chronology.
+
+K-means defaults to `random_state=0`, `n_init=10`, `max_iter=300`, and `tol=1e-4`.
+Each parent is fitted independently using the same controls. Repeated calls
+are reproducible within the same numerical environment; different dependency
+versions/platforms can change clustering. A parent with fewer distinct profiles
+than requested clusters raises `ValueError`, rather than returning too few
+representatives. Numerical collapse into fewer nonempty clusters also raises.
+Inertia uses the means of final memberships even when the iteration limit is
+reached. It may then differ from the estimator's last-center inertia.
+
+DTW retains the original Energia absolute-difference local cost. Its distance
+is the sum along a complete endpoint-to-endpoint alignment, without scaling,
+normalization, or squaring. `DTWResult` contains only `distance` and `path` and
+provides a detached JSON-compatible `to_dict()`. Paths are chronological,
+zero-based input indices. The lower-level accumulated matrix has an extra
+row and column, a zero origin, and infinite remaining boundaries; its padding
+is deliberately not part of the JSON result. Exact DTW takes O(n*m) time and
+memory for input lengths n and m. This first implementation accepts finite,
+nonempty scalar sequences, including different lengths.
+
+The DTW port corrects Energia v1.0.7's free-prefix boundary initialization and
+reverse padded-coordinate backtracking. For `[0, 10]` aligned with `[10]`, the
+corrected distance is 10, whereas the historical code returned 0. Numerical
+ties prefer diagonal, then source-only, then target-only predecessor steps.
+The original MIT notice and authorship are retained in the DTW source.
 
 `vaelchi.functions.legacy` provides the historical standalone squared-distance
 and connectivity helper APIs, including their edge behavior. The newer helpers

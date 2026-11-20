@@ -19,12 +19,15 @@
 # Vaelchi
 
 Vaelchi is a pre-alpha Python package for time-series analysis. It provides
-preprocessing and adjacency-constrained agglomerative hierarchical clustering
-(AHC) for one or more aligned numeric time series.
+preprocessing, adjacency-constrained agglomerative hierarchical clustering
+(AHC), k-means, and dynamic time warping (DTW) for numeric time series.
 
 ## Features
 
 - Cluster consecutive periods with configurable period and parent lengths.
+- Group nonadjacent periods with reproducible Euclidean k-means.
+- Align unequal-length scalar sequences with exact absolute-cost DTW.
+- Share `ClusterResult` across clustering methods; retain `AHCResult` compatibility.
 - Complete timestamped calendars and fill missing values with forward fill,
   backward fill, or time interpolation.
 - Select observed representative profiles and retain their original units.
