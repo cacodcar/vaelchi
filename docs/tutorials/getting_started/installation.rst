@@ -37,6 +37,6 @@ wheel into a separate environment:
 
 .. code-block:: console
 
-   python -m pip install dist/vaelchi-0.1.1-py3-none-any.whl
+   python -m pip install dist/vaelchi-0.2.0-py3-none-any.whl
 
 Building distributions does not publish them.
