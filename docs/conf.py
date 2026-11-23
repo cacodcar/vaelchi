@@ -1,5 +1,6 @@
 """Build Vaelchi documentation with Sphinx Book Theme."""
 
+import sys
 import tomllib
 from pathlib import Path
 
@@ -42,19 +43,13 @@ myst_enable_extensions = [
     "colon_fence",
     "substitution",
 ]
-nb_execution_mode = "off"
 autosummary_generate = True
 add_module_names = False
 autodoc_member_order = "bysource"
 
-html_theme = "sphinx_book_theme"
 html_title = "Vaelchi"
 html_logo = "_static/vaelchi-logo-light.png"
-html_static_path = ["_static"]
-html_css_files = ["custom.css"]
 # OpenAI Codex: follow the system theme until the visitor chooses Light or Dark.
-html_context = {"default_mode": "auto"}
-templates_path = ["_templates"]
 html_theme_options = {
     # OpenAI Codex: match the project logo to the selected documentation theme.
     "logo": {
@@ -71,3 +66,10 @@ html_theme_options = {
     "use_download_button": True,
     "use_sidenotes": True,
 }
+
+
+# Import only local build configuration; package APIs come from the installation.
+sys.path.insert(0, str(Path(__file__).resolve().parent / "_shared"))
+from family_docs import configure
+
+configure(globals(), Path(__file__).resolve().parent)
