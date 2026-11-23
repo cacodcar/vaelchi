@@ -8,6 +8,18 @@ Preprocessing
 
 .. autofunction:: fill_missing_values
 
+.. autofunction:: normalize
+
+.. autofunction:: scaling
+
+NSRDB observations
+------------------
+
+Install ``vaelchi[nsrdb]`` and configure h5pyd access to NREL's HSDS service.
+The ordinary Vaelchi installation does not require h5pyd or remote access.
+
+.. autofunction:: fetch_nsrdb_data
+
 Clustering
 ----------
 

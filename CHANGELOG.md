@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 0.3.0 — 2026-11-22
+
+- Add public `normalize`, `scaling`, and `fetch_nsrdb_data` functions from
+  Energia. DataFrame scaling preserves labels, missing values and constant
+  columns. Normalization shares one scale across interval endpoints.
+- Route `vaelchi.functions.other.normalize` to the shared implementation.
+  This corrects separate scaling of interval endpoints, zero/constant input,
+  and nested min–max series at that historical import path.
+- Add the optional `nsrdb` extra for h5pyd. NSRDB access loads its optional
+  dependency on demand, preserves site selection, source scaling and temporal
+  averaging, and closes the remote file after reading. Invalid county
+  selection directions now raise a descriptive ValueError.
+
+
 - Move Energia's unused `remove_outliers` function to
   `vaelchi.functions.legacy`, preserving sequential, in-place numerical
   behaviour and the existing `sd_cuttoff` and `mean_range` arguments.
