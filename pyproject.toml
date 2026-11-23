@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "vaelchi"
-version = "0.2.0"
+version = "0.3.0"
 authors = [
   { name="Rahul Kakodkar", email="cacodcar@gmail.com" },
 ]
@@ -30,6 +30,7 @@ classifiers = [
 
 dependencies = ["pandas", "numpy", "scipy", "scikit-learn"]
 [project.optional-dependencies]
+nsrdb = ["h5pyd"]
 #  shared test and quality toolchain.
 #  complete test tooling.
 test = ["coverage", "pytest", "pytest-cov", "hypothesis", "flake8", "radon", "ruff==0.16.9", "tox"]

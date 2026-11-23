@@ -5,7 +5,7 @@
 
 <!-- Version and documentation -->
 [![PyPI](https://img.shields.io/pypi/v/vaelchi)](https://pypi.org/project/vaelchi/)
-[![Version](https://img.shields.io/badge/version-0.2.0--pre--alpha-orange)](https://github.com/cacodcar/vaelchi/blob/main/CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.3.0--pre--alpha-orange)](https://github.com/cacodcar/vaelchi/blob/main/CHANGELOG.md)
 [![Python Versions](https://img.shields.io/badge/python-3.12%2B-blue)](https://github.com/cacodcar/vaelchi/blob/main/pyproject.toml)
 [![Documentation](https://img.shields.io/readthedocs/vaelchi/latest)](https://vaelchi.readthedocs.io/en/latest/index.html)
 
