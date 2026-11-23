@@ -5,6 +5,14 @@ All notable changes to this project will be documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+- Move Energia's unused `remove_outliers` function to
+  `vaelchi.functions.legacy`, preserving sequential, in-place numerical
+  behaviour and the existing `sd_cuttoff` and `mean_range` arguments.
+  Document the first-column decision rule, endpoint behaviour and historical
+  larger-window expression; this is a compatibility port, not a new filter.
+
 ## 0.2.0 — 2026-11-20
 
 - Add Euclidean k-means for observed representative periods, with independent
